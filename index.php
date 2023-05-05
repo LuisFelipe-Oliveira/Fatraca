@@ -25,7 +25,9 @@
         </header>
 
         <section class="conteudo">
-            <div></div>
+            <div class="conteudo2">
+
+            </div><!-- conteudo2 -->
         </section><!-- conteudo -->
     </body>
 </html>
