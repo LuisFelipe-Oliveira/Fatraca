@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+.container{
+    width: 100%;
+    max-width: 1670px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 9vh;
+    padding: 1%;
+    background-color: #676767;
+}
+
+.header a{
+    font-size: 34px;
+    color: #f7f5f5;
+    text-decoration: none;
+}
+
+nav.menu-desktop{
+    position: relative;
+    top: -26px;
+}
+
+.menu-desktop ul{
+    float: right;
+}
+
+.menu-desktop li{
+    float: left;
+    padding-left: 50px;
+    list-style: none;
+}
+
+.menu-desktop a{
+    text-decoration: none;
+    color: #f7f5f5;
+    font-size: 18px;
+}
+
+.menu-desktop a:hover{
+    color: #ccc;
+    transition: 0.5s;
+}
