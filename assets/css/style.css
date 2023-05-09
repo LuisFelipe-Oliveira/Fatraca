@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -6,6 +8,7 @@
 
 html,body{
     height: 100%;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .clear{
@@ -21,7 +24,7 @@ html,body{
 .header{
     height: 9vh;
     padding: 1%;
-    background-color: #676767;
+    background-color:#B20000;
 }
 
 .header a{
@@ -54,4 +57,91 @@ nav.menu-desktop{
 .menu-desktop a:hover{
     color: #ccc;
     transition: 0.5s;
+}
+
+/*------------------- slider --------------------*/
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.imagem{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.imagem img{
+    width: 800px;
+}
+
+.navegacao-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color:black;
+}
+
+#radio1:checked ~ .primeira{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .primeira{
+    margin-left: -25%;
+}
+
+.navegacao-auto div{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.navegacao-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacao-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navegacao-auto .auto-btn1{
+    background-color: black;
+}
+#radio2:checked ~ .navegacao-auto .auto-btn2{
+    background-color: black;
 }
