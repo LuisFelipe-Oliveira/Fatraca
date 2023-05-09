@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+header{
+    height: 8vh;
+    padding: 1%;
+    background-color: #676767;
+}
+
+nav.menu-desktop ul{
+    float: right;
+}
+
+nav.menu-desktop li{
+    list-style-type: none;
+}
+
+nav.menu-desktop a{
+    font-size: 28px;
+    padding: 20px;
+    text-decoration: none;
+    color: #f7f5f5;
+}
+
+navD.menu-desktop a:hover{
+    color: #ccc;
+    transition: 0.5s;
+}
