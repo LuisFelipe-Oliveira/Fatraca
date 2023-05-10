@@ -1,11 +1,24 @@
 <?php
 
-require("./config/connect.php");
+try {
+
+    require("./config/connect.php");
+
+    $query = "SELECT * FROM fatraca_users";
+    $stmt = $conn->prepare($query);
+
+    $stmt->execute();
+
+    $result = $stmt->fetchAll();
+
+} catch (PDOException $th) {
+    echo "Erro: " . $th->getMessage();
+}
+
 
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -42,38 +55,20 @@ require("./config/connect.php");
             </thead>
 
             <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Joao</td>
-                    <td>Mateus</td>
-                    <td>johny</td>
-                    <td>johny@hotmail.com</td>
-                    <td>123123123</td>
-                    <td>48545678932</td>
-                    <td>48545678932</td>
-                </tr>
-
-                <tr>
-                    <th>2</th>
-                    <td>Jose</td>
-                    <td>Silva</td>
-                    <td>jsilva</td>
-                    <td>Jose@hotmail.com</td>
-                    <td>123123123</td>
-                    <td>48545678932</td>
-                    <td>48545678932</td>
-                </tr>
-
-                <tr>
-                    <th>3</th>
-                    <td>Alan</td>
-                    <td>Maia</td>
-                    <td>alan_maia</td>
-                    <td>alan@hotmail.com</td>
-                    <td>123123123</td>
-                    <td>48545678932</td>
-                    <td>48545678932</td>
-                </tr>
+                <?php
+                foreach ($result as $linha) {
+                    echo "<tr>";
+                    echo "<td>" . $linha['id'] . "</td>";
+                    echo "<td>" . $linha['nome'] . "</td>";
+                    echo "<td>" . $linha['sobrenome'] . "</td>";
+                    echo "<td>" . $linha['usuario'] . "</td>";
+                    echo "<td>" . $linha['email'] . "</td>";
+                    echo "<td>" . $linha['senha'] . "</td>";
+                    echo "<td>" . $linha['cpf'] . "</td>";
+                    echo "<td>" . date('d/m/Y H:i:s', strtotime($linha['data_cadastro'])) . "</td>";
+                    echo "</tr>";
+                }
+                ?>
             </tbody>
         </table>
     </section><!-- tabela-conteudo -->

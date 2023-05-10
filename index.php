@@ -30,36 +30,31 @@
     </header>
 
     <section class="conteudo">
-    <div class="slider">
-        <div class="slides">
+        <div class="slider">
+            <div class="slides">
 
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
 
-            <div class="imagem primeira">
-                <img src="assets\imgs\biometria.png" alt="imagem1">
+                <div class="imagem primeira">
+                    <img src="assets\imgs\biometria.png" alt="imagem1">
+                </div>
+                <div class="imagem">
+                    <img src="assets\imgs\card.png" alt="imagem2">
+                </div>
+
+                <div class="navegacao-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                </div><!--navegacao-auto-->
+
+            </div><!--slides-->
+
+            <div class="navegacao-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
             </div>
-            <div class="imagem">
-                <img src="assets\imgs\card.png" alt="imagem2">
-            </div>
-
-            <div class="navegacao-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-            </div><!--navegacao-auto-->
-
-        </div><!--slides-->
-
-        <div class="navegacao-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-        </div>
-    </div><!-- slider --> 
-
-
-
-        <div class="conteudo2">
-        </div><!-- conteudo2 -->
+        </div><!-- slider -->
     </section><!-- conteudo -->
 
 
@@ -70,7 +65,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
-    <script src="assets\js\indexScript.js"></script>
+    <script src="./assets/js/indexScript.js"></script>
 </body>
 
 </html>

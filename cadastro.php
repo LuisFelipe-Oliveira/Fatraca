@@ -132,7 +132,7 @@ if (isset($_POST["enviar"])) {
                                 <label for="cpf">CPF</label>
                                 <input type="text" class="form-control" id="cpf" name="cpf" required>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block" name="enviar">Enviar</button>
+                            <button type="submit" class="btn btn-primary btn-block mt-2" name="enviar">Enviar</button>
                         </form>
                     </div>
                 </div>
