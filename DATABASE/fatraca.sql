@@ -50,7 +50,9 @@ INSERT INTO `fatraca_users` (`id`, `nome`, `sobrenome`, `usuario`, `email`, `sen
 (2, 'luis felipe ', 'oliveira francisco', 'luis ', 'luis.felipeoliveirafrancisco@gmail.com', '8e9c27263bd59d3c802a3baf36670ad8', '18996419356', '47584275850', '2023-05-09 12:01:01'),
 (3, 'niedo', 'da silva', 'bobo', 'niedotroxa@hotmail.com', 'f2ad06fca5d5c8797fed17efc4585cff', '18999999999', '47474747473', '2023-05-09 12:31:03'),
 (8, 'luis felipe oliveira', 'da silva', 'luis ', 'luis.felipeoliveirafrancisco@gmail.com', '4297f44b13955235245b2497399d7a93', '18123123123', '475.842.758', '2023-05-09 23:19:45');
+(9, 'henri', 'sduoahda', 'sudhahdui', 'dnsia@d.com', 'c94ad4274545d479c146cb8ab2484a16', '945484', '45648486465', '2023-05-10 14:30:05');
 
+--
 --
 -- Índices para tabelas despejadas
 --
