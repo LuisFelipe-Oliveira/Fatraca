@@ -31,6 +31,7 @@ html,body{
     font-size: 34px;
     color: #f7f5f5;
     text-decoration: none;
+    font-weight: 800;
 }
 
 nav.menu-desktop{
@@ -62,15 +63,16 @@ nav.menu-desktop{
 /*------------------- slider --------------------*/
 .slider{
     margin: 0 auto;
-    width: 800px;
-    height: 400px;
+    width: 100%;
+    height: 550px;
     overflow: hidden;
 }
 
 .slides{
     width: 400%;
-    height: 400px;
+    height: 550px;
     display: flex;
+
 }
 
 .slides input{
@@ -84,13 +86,16 @@ nav.menu-desktop{
 }
 
 .imagem img{
-    width: 800px;
+    width: 90%;
+    height: 95%; 
+    display: block;
+    margin: 0 auto;
 }
 
 .navegacao-manual{
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 100%;
+    margin-top: -60px;
     display: flex;
     justify-content: center;
 }
@@ -120,7 +125,7 @@ nav.menu-desktop{
 }
 
 .navegacao-auto div{
-    border: 2px solid red;
+    border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -129,8 +134,8 @@ nav.menu-desktop{
 
 .navegacao-auto{
     position: absolute;
-    width: 800px;
-    margin-top: 360px;
+    width: 100%;
+    margin-top: 490px;
     display: flex;
     justify-content: center;
 }

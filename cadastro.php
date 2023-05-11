@@ -75,6 +75,7 @@ if (isset($_POST["enviar"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets\css\styleCadastro.css">
     <title>Cadastro</title>
     <style>
         body {
@@ -84,6 +85,8 @@ if (isset($_POST["enviar"])) {
 </head>
 
 <body>
+
+    <a href="index.php" id="logo" >Fatraca</a>
     <div class="container mt-5">
 
         <?php
@@ -96,43 +99,42 @@ if (isset($_POST["enviar"])) {
         }
         ?>
 
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h4>Cadastro</h4>
-                    </div>
-                    <div class="card-body">
+                    <div class="main-cadastro">  
                         <form method="post">
-                            <div class="form-group mb-2">
-                                <label for="nome">Nome</label>
-                                <input type="text" class="form-control" id="nome" name="nome" required>
+                            <div class="esquerda">
+                            <h4 id="titulo">Cadastro</h4>
+                                <div class="caixa">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" required>
+                                </div>
+                                <div class="caixa">
+                                    <label for="sobrenome">Sobrenome</label>
+                                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+                                </div>
+                                <div class="caixa">
+                                    <label for="usuario">Usuário</label>
+                                    <input type="text" class="form-control" id="usuario" name="usuario" required>
+                                </div>
+                                <div class="caixa">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
                             </div>
-                            <div class="form-group mb-2">
-                                <label for="sobrenome">Sobrenome</label>
-                                <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+                            <div class="direita">
+                                <div class="caixa">
+                                    <label for="nome">Senha</label>
+                                    <input type="password" class="form-control" id="senha" name="senha" required>
+                                </div>
+                                <div class="caixa">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                                </div>
+                                <div class="caixa">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block mt-2" name="enviar">Enviar</button>
                             </div>
-                            <div class="form-group mb-2">
-                                <label for="usuario">Usuário</label>
-                                <input type="text" class="form-control" id="usuario" name="usuario" required>
-                            </div>
-                            <div class="form-group mb-2">
-                                <label for="email">E-mail</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="form-group mb-2">
-                                <label for="nome">Senha</label>
-                                <input type="password" class="form-control" id="senha" name="senha" required>
-                            </div>
-                            <div class="form-group mb-2">
-                                <label for="telefone">Telefone</label>
-                                <input type="tel" class="form-control" id="telefone" name="telefone" required>
-                            </div>
-                            <div class="form-group mb-2">
-                                <label for="cpf">CPF</label>
-                                <input type="text" class="form-control" id="cpf" name="cpf" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block mt-2" name="enviar">Enviar</button>
                         </form>
                     </div>
                 </div>

@@ -9,6 +9,21 @@ body *{
     box-sizing: border-box;
 }
 
+#logo{
+    color: white;
+    font-size: 4vh;
+    text-decoration: none;
+    font-weight: 800;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    transition: 0.5s;
+}
+
+#logo:hover{
+    color: rgb(189, 184, 184);
+}
+
 .main-login{
     width: 100vw;
     height: 100vh;
@@ -36,8 +51,9 @@ body *{
 
 .left-login > h1{
     color: rgb(255, 255, 255);
-    font-size: 3vw;
+    font-size: 5vh;
     font-weight: 800;
+    margin-left: 5px;
 }
 
 .right-login{
@@ -98,6 +114,13 @@ body *{
 
 .textfield > input::placeholder{
     color: whitesmoke;
+}
+
+.btn-alt {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    
 }
 
 .btn-login{

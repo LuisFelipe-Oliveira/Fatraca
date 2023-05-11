@@ -14,13 +14,13 @@
 
 <body>
     <div class="main-login">
+        <a href="index.php" id="logo">Fatraca</a>
         <div class="left-login">
             <h1>Faça login e conheça a Fatec</h1>
             <div id="left-login-image">
                 <img src="assets\imgs\loginImg.svg" alt="">
             </div>
         </div>
-
 
         <div class="right-login">
             <div class="card-login">
@@ -34,6 +34,8 @@
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
+                <a href="" class="btn-alt">Esqueceu a senha?</a>
+                <a href="cadastro.php" class="btn-alt">Criar conta</a>
                 <button class="btn-login">Login</button>
                 <butoton class="entrar-com">
                     <span class="entrar-txt">Entrar com</span>
