@@ -12,12 +12,11 @@ body *{
 
 #logo{
     color: white;
-    font-size: 4vh;
+    font-size: 5vh;
     text-decoration: none;
     font-weight: 800;
-    position: absolute;
-    top: 15px;
-    left: 30px;
+    margin: 20px 10px;
+    /* position: absolute; */
     transition: 0.5s;
 }
 
@@ -25,54 +24,113 @@ body *{
     color: rgb(189, 184, 184);
 }
 
-
-.main-cadastro{
-    width: 100%;
-    background: orangered;
-    border-radius: 20px;
-    margin-top: 40px;
-    margin-left: 0;
-    display: flex;
-    float: left;
-    justify-content: center;
-}
-
 #titulo{
     color: white;
     font-size: 4vh;
     font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0 10px;
 }
 
+.main{
+    width: 80vw;
+    height: 80vh;
+    background: rgb(255, 69, 0);
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 16pt;
+    box-shadow: 0px 10px 40px rgb(255, 88, 27);
+}
+
+
 .esquerda{
-    width: 50%;
+    width: 45%;
     display: flex;
     float: left;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding-left: 10px;
+    padding: 10px;
+    align-items: center;
 }
 
 .direita{
-    width: 50%;
+    width: 45%;
     display: flex;
     float: right;
     clear: right;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding-left: 10px;
+    padding: 0px;
+    margin-top: 10px;
 }
-/* 
+
+
 .caixa > input{
     width: 100%;
     border: none;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 60px;
     background-color:coral;
     color: white;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px rgb(255, 88, 27);
+    font-size: 13pt;
+    box-shadow: 0px 10px 40px rgb(194, 56, 5);
     outline: none;
     box-sizing: border-box;
-} */
+    margin: 10px 0 10px 0;
+}
+
+
+
+.btn-enviar{
+    width: 100%;
+    padding: 16px 0px ;
+    margin: 25px 0 0;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3.5px;
+    color:rgb(255, 255, 255);
+    font-size: 14pt;
+    background-image: linear-gradient(90deg, #B20000, #330000);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px rgb(88, 13, 13);
+    transition: .3s;
+}
+
+.btn-enviar:hover{
+    border-radius: 0;
+}
+
+.login{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.login > h5{
+    padding-right: 5px;
+}
+
+.login > a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.login > a:hover{
+    color: gray;
+}

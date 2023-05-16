@@ -73,8 +73,8 @@ if (isset($_POST["enviar"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="assets\css\styleCadastro.css">
     <title>Cadastro</title>
     <style>
@@ -86,7 +86,6 @@ if (isset($_POST["enviar"])) {
 
 <body>
 
-    <a href="index.php" id="logo" >Fatraca</a>
     <div class="container mt-5">
 
         <?php
@@ -99,41 +98,45 @@ if (isset($_POST["enviar"])) {
         }
         ?>
 
-                    <div class="main-cadastro">  
+                <a href="index.php" id="logo" >Fatraca</a>
+                    <div class="main">
                         <form method="post">
+                            <h3 id="titulo">Cadastro</h3>
                             <div class="esquerda">
-                            <h4 id="titulo">Cadastro</h4>
                                 <div class="caixa">
                                     <label for="nome">Nome</label>
-                                    <input type="text" class="form-control" id="nome" name="nome" required>
+                                    <input type="text" class="form" id="nome" name="nome" required>
                                 </div>
                                 <div class="caixa">
                                     <label for="sobrenome">Sobrenome</label>
-                                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+                                    <input type="text" class="form" id="sobrenome" name="sobrenome" required>
                                 </div>
                                 <div class="caixa">
                                     <label for="usuario">Usuário</label>
-                                    <input type="text" class="form-control" id="usuario" name="usuario" required>
+                                    <input type="text" class="form" id="usuario" name="usuario" required>
                                 </div>
                                 <div class="caixa">
                                     <label for="email">E-mail</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <input type="email" class="form" id="email" name="email" required>
                                 </div>
                             </div>
                             <div class="direita">
                                 <div class="caixa">
                                     <label for="nome">Senha</label>
-                                    <input type="password" class="form-control" id="senha" name="senha" required>
+                                    <input type="password" class="form" id="senha" name="senha" required>
                                 </div>
                                 <div class="caixa">
                                     <label for="telefone">Telefone</label>
-                                    <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                                    <input type="tel" class="form" id="telefone" name="telefone" required>
                                 </div>
                                 <div class="caixa">
                                     <label for="cpf">CPF</label>
-                                    <input type="text" class="form-control" id="cpf" name="cpf" required>
+                                    <input type="text" class="form" id="cpf" name="cpf" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block mt-2" name="enviar">Enviar</button>
+                                <button type="submit" class="btn-enviar" name="enviar">Enviar</button>
+                                <div class="login">
+                                    <h5>Já possui um cadastro? </h5><a href="login.php">Entre</a>
+                                </div>
                             </div>
                         </form>
                     </div>
