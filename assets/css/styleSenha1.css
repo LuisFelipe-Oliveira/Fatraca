@@ -17,6 +17,7 @@ body * {
 }
 
 h1 {
+    margin: 0;
     color: white;
     font-weight: 800;
     font-size: 45px;
@@ -26,7 +27,7 @@ h1 {
 .fieldset {
     width: 60vw;
     height: 60vh;
-    padding: 10px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -76,9 +77,28 @@ button {
     text-transform: uppercase;
     font-weight: 800;
     padding: 16px 0;
-
     letter-spacing: 3.5px;
     color:rgb(255, 255, 255);
     background-image: linear-gradient(90deg, #B20000, #330000);
     box-shadow: 0px 10px 40px -12px rgb(88, 13, 13);
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    border-radius: 0;
+}
+
+@media only screen and (max-width: 848px) {
+    .fieldset {
+        width: 65vw;
+        height: 65vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .fieldset {
+        width: 70vw;
+        height: 70vh;
+    }
 }

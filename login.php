@@ -108,7 +108,7 @@ if(isset($_POST["enviar"])) {
                         <label for="senha">Senha</label>
                         <input type="password" name="senha" placeholder="Senha">
                     </div>
-                    <a href="" class="btn-alt">Esqueceu a senha?</a>
+                    <a href="senha1.php" class="btn-alt">Esqueceu a senha?</a>
                     <a href="cadastro.php" class="btn-alt">Criar conta</a>
                     <button class="btn-login" name="enviar">Login</button>
                     <butoton class="entrar-com">
