@@ -5,66 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Fatraca</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="titulo">
-                <a href="#">Fatraca</a>
-            </div><!-- titulo -->
+    <div class="app">
 
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="cadastro.php">Cadastro</a></li>
-                    <li><a href="AdmPage.php">Administradores</a></li>
-                </ul>
-            </nav><!-- menu-desktop -->
-            <div class="clear"></div>
-        </div><!-- container -->
-    </header>
+        <aside class="logo"> <!-- logo  -->
+            <a href="index.php" class="logo">
+                <img src="assets\imgs\logo2.png" alt="logo" />
+            </a>
+        </aside>
 
-    <section class="conteudo">
-        <div class="slider">
-            <div class="slides">
+        <aside class="menu-area"> <!-- menu  -->
+            <nav class="menu">
+                <a href="login.php">
+                    <i class="fa-solid fa-right-to-bracket"></i> Login
+                </a>
+                <a href="cadastro.php">
+                    <i class="fa-solid fa-user-plus"></i> Cadastre-se
+                </a>
+                <a href="AdmPage.php">
+                    <i class="fa fa-users"></i> Administradores
+                </a>
+            </nav>
+        </aside>
 
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
+        <Header>
+            <header class="header d-nome d-sm-flex flex-column">
+                <h1 class="mt-3">
+                    Venha conhecer a Fatec!
+                </h1>
+                <p class="lead text-muted">Fatraca garantindo a sua segurança na faculdade.</p>
+            </header>
+        </Header>
 
-                <div class="imagem primeira">
-                    <img src="assets\imgs\biometria.png" alt="imagem1">
+
+        <main class="content container-fluid">
+            <div class="conteudo">
+                <div >
+                <img id="biometria" src="assets\imgs\biometria.png" alt="">
+                    <p > O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
+                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
+                        caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos,
+                        mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi
+                        popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens
+                        com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que
+                        incluem versões do Lorem Ipsum.O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
+                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
+                        caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos,
+                        mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi
+                        popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens
+                        com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que
+                        incluem versões do Lorem Ipsum.</p>
                 </div>
-                <div class="imagem">
-                    <img src="assets\imgs\card.png" alt="imagem2">
+                <hr />
+                <div>
+                <img id="card" src="assets/imgs/card.png" alt="">
+                <p > O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
+                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
+                        caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos,
+                        mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi
+                        popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens
+                        com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que
+                        incluem versões do Lorem Ipsum.O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
+                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
+                        caracteres de um texto para criar um espécime de livro. </p>
+                
                 </div>
-
-                <div class="navegacao-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                </div><!--navegacao-auto-->
-
-            </div><!--slides-->
-
-            <div class="navegacao-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
             </div>
-        </div><!-- slider -->
-    </section><!-- conteudo -->
+        </main>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-        </script>
+        <footer class="footer"> <!-- rodapé  -->
+            <span>
+                É os <strong>Guris </strong> e não tem jeito
+                <i class='fa fa-bolt text-warning'></i> </span>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-        </script>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
     <script src="./assets/js/indexScript.js"></script>
 </body>
 

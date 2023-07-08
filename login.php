@@ -111,14 +111,6 @@ if(isset($_POST["enviar"])) {
                     <a href="senha1.php" class="btn-alt">Esqueceu a senha?</a>
                     <a href="cadastro.php" class="btn-alt">Criar conta</a>
                     <button class="btn-login" name="enviar">Login</button>
-                    <butoton class="entrar-com">
-                        <span class="entrar-txt">Entrar com</span>
-                        <div class="e-btn">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-google"></i></a>
-                            <a href="#"><i class="fab fa-microsoft"></i></a>
-                        </div>
-                    </butoton>
 
                 </div>
 
