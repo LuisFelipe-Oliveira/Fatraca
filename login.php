@@ -1,65 +1,65 @@
 <?php
-session_start();
+// session_start();
 
-$flag_msg = null;
+// $flag_msg = null;
 
-$msg = "";
+// $msg = "";
 
-if (isset($_POST["enviar"])) {
-    require("./config/connect.php");
+// if (isset($_POST["enviar"])) {
+//     require("./config/connect.php");
 
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
+//     $usuario = $_POST["usuario"];
+//     $senha = $_POST["senha"];
 
-    $form = [$usuario, $senha];
+//     $form = [$usuario, $senha];
 
-    $aux = 0;
+//     $aux = 0;
 
-    foreach ($form as $field) {
-        if (empty($field)) {
-            $aux += 1;
-        }
-    }
+//     foreach ($form as $field) {
+//         if (empty($field)) {
+//             $aux += 1;
+//         }
+//     }
 
-    if ($aux > 0) {
-        $flag_msg = false;
-        $msg = "preencha todos os campos!";
-    } else {
+//     if ($aux > 0) {
+//         $flag_msg = false;
+//         $msg = "preencha todos os campos!";
+//     } else {
 
-        $senha_encrypt = md5($senha);
+//         $senha_encrypt = md5($senha);
 
-        try {
+//         try {
 
-            $sql = "SELECT * FROM fatraca_users WHERE usuario = :usuario AND senha = :senha";
+//             $sql = "SELECT * FROM fatraca_users WHERE usuario = :usuario AND senha = :senha";
 
-            $stmt = $conn->prepare($sql);
+//             $stmt = $conn->prepare($sql);
 
-            $stmt->bindValue(':usuario', $usuario);
-            $stmt->bindValue(':senha', $senha_encrypt);
+//             $stmt->bindValue(':usuario', $usuario);
+//             $stmt->bindValue(':senha', $senha_encrypt);
 
-            $stmt->execute();
+//             $stmt->execute();
 
-            if ($stmt->rowCount() > 0) {
-                $_SESSION['usuario'] = $usuario;
-                $msg = "Sucesso!";
-            } else {
-                $msg = "Erro!";
-            }
+//             if ($stmt->rowCount() > 0) {
+//                 $_SESSION['usuario'] = $usuario;
+//                 $msg = "Sucesso!";
+//             } else {
+//                 $msg = "Erro!";
+//             }
 
-            $flag_msg = true; // Sucesso 
+//             $flag_msg = true; 
 
-        } catch (PDOException $th) {
-            $conn = null;
+//         } catch (PDOException $th) {
+//             $conn = null;
 
-            $flag_msg = false; //Erro 
-            $msg = "Erro na conexão com o Banco de dados: " . $th->getMessage();
-        }
+//             $flag_msg = false; 
+//             $msg = "Erro na conexão com o Banco de dados: " . $th->getMessage();
+//         }
 
-    }
+//     }
 
-    $conn = null;
+//     $conn = null;
 
-}
+//}
 
 ?>
 
@@ -79,13 +79,13 @@ if (isset($_POST["enviar"])) {
 <body>
     <div class="main-login">
         <?php
-        if (!is_null($flag_msg)) {
-            if ($flag_msg) {
-                echo "<div class='alert alert-success' style='position: absolute; top: 1%; left: 50%'>$msg</div>";
-            } else {
-                echo "<div class='alert alert-warning' role='alert'>$msg</div>";
-            }
-        }
+        // if (!is_null($flag_msg)) {
+        //     if ($flag_msg) {
+        //         echo "<div class='alert alert-success' style='position: absolute; top: 1%; left: 50%'>$msg</div>";
+        //     } else {
+        //         echo "<div class='alert alert-warning' role='alert'>$msg</div>";
+        //     }
+        // }
         ?>
         <a href="index.php" id="logo">Fatraca</a>
         <div class="left-login">
@@ -94,7 +94,7 @@ if (isset($_POST["enviar"])) {
                 <img src="assets\imgs\loginImg.svg" alt="">
             </div>
         </div>
-        <form method="post">
+        <form action="testLogin.php" method="post">
             <div class="right-login">
                 <div class="card-login">
                     <h1>Login</h1>
@@ -109,7 +109,7 @@ if (isset($_POST["enviar"])) {
                     </div>
                     <a href="senha1.php" class="btn-alt">Esqueceu a senha?</a>
                     <a href="cadastro.php" class="btn-alt">Criar conta</a>
-                    <button class="btn-login" name="enviar">Login</button>
+                    <button class="btn-login" name="submit">Login</button>
 
                 </div>
 

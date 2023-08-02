@@ -33,7 +33,7 @@ if (isset($_POST["enviar"])) {
         $msg = "preencha todos os campos!";
     } else {
 
-        $senha_encrypt = md5($senha);
+        // $senha_encrypt = md5($senha);
 
         try {
             $sql = "INSERT INTO fatraca_users(nome,sobrenome,usuario,email,senha,celular,cpf) 
@@ -45,7 +45,7 @@ if (isset($_POST["enviar"])) {
             $stmt->bindParam(":sobrenome", $sobrenome);
             $stmt->bindParam(":usuario", $usuario);
             $stmt->bindParam(":email", $email);
-            $stmt->bindParam(":senha", $senha_encrypt);
+            $stmt->bindParam(":senha", $senha);
             $stmt->bindParam(":celular", $celular);
             $stmt->bindParam(":cpf", $cpf);
 
