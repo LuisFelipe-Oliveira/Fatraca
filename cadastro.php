@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $flag_msg = null;
 
 $msg = "";
@@ -49,8 +51,14 @@ if (isset($_POST["enviar"])) {
 
             $stmt->execute();
 
+            if (!isset($_SESSION['usuario'])) {
+                header("Location: login.php"); // Redireciona para a página de login
+                exit();
+            }
+
             $flag_msg = true; // Sucesso 
-            $msg = "Dados enviados com sucesso!";
+            // $msg = "Dados enviados com sucesso!";
+            header("location: login.php");
 
         } catch (PDOException $th) {
             $conn = null;
@@ -91,7 +99,7 @@ if (isset($_POST["enviar"])) {
         <?php
         if (!is_null($flag_msg)) {
             if ($flag_msg) {
-                echo "<div class='alert alert-success' role='alert'>$msg</div>";
+                echo "<div class='alert alert-success' role='alert' ></div></div></div>$msg</div>";
             } else {
                 echo "<div class='alert alert-warning' role='alert'>$msg</div>";
             }

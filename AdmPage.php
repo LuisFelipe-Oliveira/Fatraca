@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 try {
 
     require("./config/connect.php");
@@ -34,7 +36,7 @@ try {
     <header>
         <nav class="menu-desktop">
             <ul>
-                <li><a href="">Sair</a></li>
+                <li><a href="index.php">Sair</a></li>
             </ul>
         </nav><!-- menu-desktop -->
     </header><!-- header -->

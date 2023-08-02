@@ -40,9 +40,10 @@ aside.logo{
     grid-area: logo;
 }
 
-header.header{
+/* header.header{
     grid-area: header;
-}
+} */
+
 
 aside.menu-area {
     grid-area: menu;
@@ -50,6 +51,61 @@ aside.menu-area {
 
 main.content{
     grid-area: content;
+}
+
+/* Estilo para o plugin slick */
+
+.slick-dotted ul{
+	list-style-type: none;
+	text-align: center;
+	position: relative;
+	margin-top: -50px;
+    z-index: 999;
+}
+
+.slick-dotted li{
+	display: inline-block;
+	margin: 0 7px;
+}
+
+.slick-dotted button:focus{
+	outline: 0;
+}
+
+.slick-dotted li button{
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	color: #d8d8d8;
+	border-width: 0;
+	background: #d8d8d8;
+	cursor: pointer;
+}
+
+li.slick-active button{
+	background: #688293;
+	color: #688293;
+}
+
+.slick-slide:focus{
+	outline: none;
+}
+
+/* Fim do estilo */
+
+
+/* Estilo do header */
+
+.container{
+    width: 100%;
+    max-width: 1670px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 10.5vh;
+    padding: 1%;
+    background-color:#B20000;
 }
 
 footer.footer{
@@ -171,22 +227,54 @@ main > div {
 }
 /* main */
 
+nav.menu-desktop{
+    position: relative;
+    top: -32px;
+}
 
+.menu-desktop ul{
+    float: right;
+}
 
-@media(max-width: 768px) {
+.menu-desktop li{
+    float: left;
+    padding-left: 50px;
+    list-style: none;
+}
+
+.menu-desktop a{
+    text-decoration: none;
+    color: #f7f5f5;
+    font-size: 18px;
+}
+
+.menu-desktop a:hover{
+    color: #ccc;
+    transition: 0.5s;
+}
+
+/* Fim do header */
+
+@media screen and (max-width: 768px) {
+
     .app{
         grid-template-rows: 
-            var(--header-height-m)
+            var(--logo-height)
             var(--menu-top-height)
             1fr
             var(--footer-height);
-        grid-template-columns: var(--aside-width) 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: 
-            "logo header"
-            "menu menu"
-            "content content"
-            "footer footer";
+            "logo"
+            "menu"
+            "content"
+            "footer";
     }
+
+    .header{
+        display: none;
+    }
+
     .menu{
         display: flex;
         justify-content: flex-start;
@@ -204,23 +292,7 @@ main > div {
 
 }
 
-@media(max-width: 576px) {
-    .app{
-        grid-template-rows: 
-            var(--logo-height)
-            var(--menu-top-height)
-            1fr
-            var(--footer-height);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "logo"
-            "menu"
-            "content"
-            "footer";
-    }
-    .header{
-        display: none;
-    }
+@media screen and (max-width: 576px) {
 
     #biometria {
         height: 200px;
