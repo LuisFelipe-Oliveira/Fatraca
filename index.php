@@ -41,7 +41,7 @@ session_start();
                 <a href="cadastro.php">
                     <i class="fa-solid fa-user-plus"></i> Cadastre-se
                 </a>
-                <a href="AdmPage.php">
+                <a href="validacaoAdm.php">
                     <i class="fa fa-users"></i> Administradores
                 </a>
             </nav>
