@@ -41,7 +41,14 @@
         </aside>
 
         <aside class="menu-area"> <!-- menu  -->
+
             <nav class="menu">
+            <div class="perfil">
+                <a href="perfil.php">   
+                <img src="assets\imgs\circle.png" alt="">
+                <span>Bem Vindo Zé</span>
+                    </a>
+            </div>
                 <a href="sair.php">
                     <i class="fa-solid fa-right-to-bracket"></i> Sair
                 </a>
@@ -51,6 +58,7 @@
                 <a href="validacaoAdm.php">
                     <i class="fa fa-users"></i> Administradores
                 </a>
+                
             </nav>
         </aside>
 

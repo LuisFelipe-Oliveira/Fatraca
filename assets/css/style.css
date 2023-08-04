@@ -150,6 +150,28 @@ aside.menu-area{
     background: linear-gradient(135deg,  #B20000 0%, #330000 100% );
 }
 
+.perfil img{
+    width: 25%;
+    height: 25%;
+    padding-right: 4px;
+}
+
+.perfil a{
+    
+    font-weight: 700;
+    
+}
+
+.perfil a:hover{
+    background-color: #730606;
+}
+
+.perfil{
+    border: #02090ed7 0.5px solid;
+    background-color:#730606;
+
+}
+    
 
 /* --- Nav --- */
 
@@ -197,8 +219,8 @@ header.header p{
 }
 
 #card{
-    height: 250px;
-    width: 520px;
+    height: 210px;
+    width: 410px;
     margin-left: 13px;
     float: right;
     margin-top: 5px;
@@ -290,6 +312,18 @@ nav.menu-desktop{
 
     }
 
+    .perfil img{
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+    }
+
+    .perfil{
+        width: 35%;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+    }
 }
 
 @media screen and (max-width: 576px) {
