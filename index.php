@@ -49,7 +49,7 @@ session_start();
 
         <Header>
             <header class="header d-nome flex-column">
-                <h1 class="mt-3">
+                <h1 >
                     Venha conhecer a Fatec!
                 </h1>
                 <p class="lead text-muted">Fatraca garantindo a sua segurança na faculdade.</p>

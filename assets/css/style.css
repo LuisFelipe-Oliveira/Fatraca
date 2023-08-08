@@ -179,8 +179,9 @@ aside.menu-area{
 
 header.header{
     background-color: #FFF;
-    padding: 0px 15px;
-    overflow: hidden;
+    padding: 20px 15px;
+    margin-top: 0;
+    /* overflow: hidden; */
     white-space: nowrap;
     box-shadow: var(--shadow);
 }
@@ -192,6 +193,7 @@ header.header h1{
 header.header p{
     text-align: justify;
     font-size: 1.2em;
+    
 }
 
 /* header */

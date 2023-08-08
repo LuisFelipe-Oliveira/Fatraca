@@ -143,44 +143,7 @@ body *{
 
 
 
-.e-btn{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    display: flex;
-    justify-content: space-around;
-    bottom: 0;
-    transform: translateY(100%);
-}
 
-.e-btn a{
-    color: white;
-    transition: .3s;
-    font-size: 3vh;
-}
-
-
-.entrar-txt{
-    display: inline-block;
-    transition: .3s;
-}
-
-.entrar-com:hover .entrar-txt,
-.entrar-com:hover .e-btn a{
-    transform: translateY(-40px);
-}
-
-.e-btn a:nth-child(2){
-    transition-delay: 60ms;
-}
-
-.e-btn a:nth-child(3){
-    transition-delay: 120ms;
-}
-
-.e-btn a:hover{
-    opacity: .7;
-}
 
 @media only screen and (max-width: 950px){
     .card-login{
