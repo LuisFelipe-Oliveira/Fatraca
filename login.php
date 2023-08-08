@@ -1,68 +1,3 @@
-<?php
-// session_start();
-
-// $flag_msg = null;
-
-// $msg = "";
-
-// if (isset($_POST["enviar"])) {
-//     require("./config/connect.php");
-
-//     $usuario = $_POST["usuario"];
-//     $senha = $_POST["senha"];
-
-//     $form = [$usuario, $senha];
-
-//     $aux = 0;
-
-//     foreach ($form as $field) {
-//         if (empty($field)) {
-//             $aux += 1;
-//         }
-//     }
-
-//     if ($aux > 0) {
-//         $flag_msg = false;
-//         $msg = "preencha todos os campos!";
-//     } else {
-
-//         $senha_encrypt = md5($senha);
-
-//         try {
-
-//             $sql = "SELECT * FROM fatraca_users WHERE usuario = :usuario AND senha = :senha";
-
-//             $stmt = $conn->prepare($sql);
-
-//             $stmt->bindValue(':usuario', $usuario);
-//             $stmt->bindValue(':senha', $senha_encrypt);
-
-//             $stmt->execute();
-
-//             if ($stmt->rowCount() > 0) {
-//                 $_SESSION['usuario'] = $usuario;
-//                 $msg = "Sucesso!";
-//             } else {
-//                 $msg = "Erro!";
-//             }
-
-//             $flag_msg = true; 
-
-//         } catch (PDOException $th) {
-//             $conn = null;
-
-//             $flag_msg = false; 
-//             $msg = "Erro na conexão com o Banco de dados: " . $th->getMessage();
-//         }
-
-//     }
-
-//     $conn = null;
-
-//}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -78,15 +13,6 @@
 
 <body>
     <div class="main-login">
-        <?php
-        // if (!is_null($flag_msg)) {
-        //     if ($flag_msg) {
-        //         echo "<div class='alert alert-success' style='position: absolute; top: 1%; left: 50%'>$msg</div>";
-        //     } else {
-        //         echo "<div class='alert alert-warning' role='alert'>$msg</div>";
-        //     }
-        // }
-        ?>
         <a href="index.php" id="logo">Fatraca</a>
         <div class="left-login">
             <h1>Faça login e conheça a Fatec</h1>

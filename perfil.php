@@ -1,3 +1,23 @@
+<?php 
+
+    session_start();
+
+    if((!isset($_SESSION['usuario']) == true) and (!isset($_SESSION['senha']) == true)){
+        unset($_SESSION['usuario']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
+    $logado = $_SESSION['usuario'];
+
+    include('./config/connect.php');
+
+    $sql = "SELECT nome, sobrenome FROM `fatraca_users`";
+
+    $result = $conn->query($sql);
+
+    $return = $result->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,7 +30,18 @@
     <div class="profile">
         <div class="profile-header">
             <img id="profile-picture" src="assets\imgs\perfil.jpg" alt="Perfil">
-            <h1 id="username">Rogério Rei Delas</h1>
+            <?php 
+            
+            $id = $_SESSION['id'];    
+
+            foreach ($return as &$value) {
+                if ($id)
+                    echo "<h1>" . $value['nome'] . $value['sobrenome'] ."</h1>";
+            }
+                
+
+          
+            ?>
             <p id="user-role">Administrador</p>
         </div>
         <div class="profile-details">

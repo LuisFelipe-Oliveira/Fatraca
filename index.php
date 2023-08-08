@@ -41,18 +41,15 @@ session_start();
                 <a href="cadastro.php">
                     <i class="fa-solid fa-user-plus"></i> Cadastre-se
                 </a>
-                <a href="validacaoAdm.php">
-                    <i class="fa fa-users"></i> Administradores
-                </a>
             </nav>
         </aside>
-
+                <!-- d-nome flex-column lead text-muted -->
         <Header>
-            <header class="header d-nome flex-column">
+            <header class="header ">
                 <h1 >
                     Venha conhecer a Fatec!
                 </h1>
-                <p class="lead text-muted">Fatraca garantindo a sua segurança na faculdade.</p>
+                <p class="">Fatraca garantindo a sua segurança na faculdade.</p>
             </header>
         </Header>
 

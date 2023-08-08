@@ -18,3 +18,4 @@ try {
 } catch (PDOException $th) {
     echo "erro na conexão: " . $th->getMessage();
 }
+?>

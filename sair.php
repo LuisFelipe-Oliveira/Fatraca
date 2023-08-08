@@ -4,7 +4,6 @@
 
     unset($_SESSION['usuario']);
     unset($_SESSION['senha']);
-    header('Location: Login.php');
-
+    header('Location: index.php');
 
 ?>
