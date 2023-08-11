@@ -13,10 +13,10 @@ if (isset($_POST["enviar"])) {
     $sobrenome = $_POST["sobrenome"];
     $usuario = $_POST["usuario"];
     $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $senha = md5($_POST["senha"]);
     $celular = $_POST["telefone"];
     $cpf = $_POST["cpf"];
-
+    $tipo = 2;
 
     $form = [$nome, $sobrenome, $usuario, $email, $senha, $celular, $cpf];
 
@@ -36,8 +36,9 @@ if (isset($_POST["enviar"])) {
         // $senha_encrypt = md5($senha);
 
         try {
-            $sql = "INSERT INTO fatraca_users(nome,sobrenome,usuario,email,senha,celular,cpf) 
-            VALUES (:nome,:sobrenome,:usuario,:email,:senha,:celular,:cpf)";
+
+            $sql = "INSERT INTO fatraca_users(nome,sobrenome,usuario,email,senha,celular,cpf,tipo_users_id) 
+            VALUES (:nome,:sobrenome,:usuario,:email,:senha,:celular,:cpf,:tipo)";
 
             $stmt = $conn->prepare($sql);
 
@@ -48,6 +49,7 @@ if (isset($_POST["enviar"])) {
             $stmt->bindParam(":senha", $senha);
             $stmt->bindParam(":celular", $celular);
             $stmt->bindParam(":cpf", $cpf);
+            $stmt->bindParam(":tipo", $tipo);
 
             $stmt->execute();
 
@@ -59,6 +61,7 @@ if (isset($_POST["enviar"])) {
             $flag_msg = true; // Sucesso 
             // $msg = "Dados enviados com sucesso!";
             header("location: login.php");
+
 
         } catch (PDOException $th) {
             $conn = null;

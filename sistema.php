@@ -7,7 +7,7 @@
         unset($_SESSION['senha']);
         header('Location: login.php');
     }
-    $logado = $_SESSION['usuario'];
+    // $logado = $_SESSION['usuario'];
 
 
 ?>
@@ -46,7 +46,7 @@
             <div class="perfil">
                 <a href="perfil.php">   
                 <img src="assets\imgs\circle.png" alt="">
-                <span>Bem Vindo Zé</span>
+                <span>Bem Vindo <?php echo $_SESSION['name']; ?></span>
                     </a>
             </div>
                 <a href="sair.php">

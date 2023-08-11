@@ -8,20 +8,27 @@
         include_once('./config/connect.php');
 
         $usuario = $_POST['usuario'];
-        $senha = $_POST['senha'];
+        $senha = md5($_POST['senha']);
 
         $sql = "SELECT * FROM `fatraca_users` WHERE usuario = '$usuario' AND senha = '$senha'";
 
-        $result = $conn->query($sql);
+        $stmt = $conn->prepare($sql);
 
-        if ($result->rowCount() < 1){
+        $stmt->execute();
+
+        $result = $stmt->fetchAll();
+
+        if (count($result) < 1){
             unset($_SESSION['usuario']);
             unset($_SESSION['senha']);
             header('Location: login.php');
         }else{
-            $_SESSION['usuario'] = $usuario;
-            $_SESSION['senha'] = $senha;
-            header('Location: sistema.php');
+            foreach($result as $row){
+                $_SESSION['name'] = $row['nome'];
+                $_SESSION['fullname'] = "{$row['nome']} {$row['sobrenome']}";
+                $_SESSION['senha'] = $senha;
+                header('Location: sistema.php');
+            }
         }
         
     }
