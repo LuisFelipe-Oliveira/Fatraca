@@ -1,5 +1,7 @@
 <?php 
 
+// login
+
     session_start();
 
     if(isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha'])){
@@ -36,5 +38,7 @@
         //Não acessa
         header('Location: login.php');
     }
+
+
 
 ?>

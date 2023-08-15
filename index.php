@@ -35,10 +35,10 @@ session_start();
 
         <aside class="menu-area"> <!-- menu  -->
             <nav class="menu">
-                <a href="login.php">
+                <a href="login.php?login" id="link2"">
                     <i class="fa-solid fa-right-to-bracket"></i> Login
                 </a>
-                <a href="cadastro.php">
+                <a href="login.php?cadastro" id="link1"">
                     <i class="fa-solid fa-user-plus"></i> Cadastre-se
                 </a>
             </nav>
@@ -104,6 +104,16 @@ session_start();
     <script src="./assets/js/slick.min.js"></script>
 
     <script src="./assets/js/function.js"></script>
+
+    <script>
+        document.getElementById('link1').addEventListener('click', function() {
+            localStorage.setItem('acao', 'alterarClasse1');
+        });
+
+        document.getElementById('link2').addEventListener('click', function() {
+            localStorage.setItem('acao', 'alterarClasse2');
+        });
+    </script>
 
 </body>
 
