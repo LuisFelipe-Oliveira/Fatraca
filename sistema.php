@@ -53,7 +53,7 @@
                     <i class="fa-solid fa-right-to-bracket"></i> Sair
                 </a>
 
-                <a href="validacaoAdm.php">
+                <a href="AdmPage.php">
                     <i class="fa fa-users"></i> Administradores
                 </a>
                 

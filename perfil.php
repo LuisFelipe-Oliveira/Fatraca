@@ -34,8 +34,8 @@
             <p contenteditable="true">Olá! Eu sou um desenvolvedor web apaixonado por criar sites incríveis.</p>
             <h2>Contato</h2>
             <ul class="contact-info">
-                <li>Email: <span contenteditable="true" id="e-mail" ><?php echo $_SESSION['email_user']; ?></span></li>
-                <li>Telefone: <span contenteditable="true" id="telefone"><?php echo $_SESSION['celular_user']; ?></span></li>
+                <li>Email: <span contenteditable="true" id="e-mail" >assdasd</span></li>
+                <li>Telefone: <span contenteditable="true" id="telefone">sdfsdf ?></span></li>
             </ul>
             <button id="edit-button">Editar Perfil</button>
         </div>
