@@ -13,8 +13,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" -->
+        <!-- integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -25,80 +25,42 @@ session_start();
 </head>
 
 <body>
-    <div class="app">
-
-        <aside class="logo"> <!-- logo  -->
-            <a href="index.php" class="logo">
-                <img src="assets\imgs\logo2.png" alt="logo" />
+    <section>
+        <div class="circle">
+            <div class="circle2"></div>
+        </div>
+        <header>
+            <a href="" class="logo">
+                <h1>Fatraca</h1>
             </a>
-        </aside>
+            <ul>
+                <li><a href="">Sobre nós</a></li>
+                <li><a href="login.php?login" id="link2"">Entrar</a></li>
+                <li><a href="login.php?cadastro" id="link1"">Cadastrar</a></li>
 
-        <aside class="menu-area"> <!-- menu  -->
-            <nav class="menu">
-                <a href="login.php?login" id="link2"">
-                    <i class="fa-solid fa-right-to-bracket"></i> Login
-                </a>
-                <a href="login.php?cadastro" id="link1"">
-                    <i class="fa-solid fa-user-plus"></i> Cadastre-se
-                </a>
-            </nav>
-        </aside>
-                <!-- d-nome flex-column lead text-muted -->
-        <Header>
-            <header class="header ">
-                <h1 >
-                    Venha conhecer a Fatec!
-                </h1>
-                <p class="">Fatraca garantindo a sua segurança na faculdade.</p>
-            </header>
-        </Header>
-
-
-        <main class="content container-fluid">
-            <div class="conteudo">
-                <div >
-                <img id="biometria" src="assets\imgs\biometria.png" alt="">
-                    <p > O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
-                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
-                        caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos,
-                        mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi
-                        popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens
-                        com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que
-                        incluem versões do Lorem Ipsum.O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
-                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
-                        caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos,
-                        mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi
-                        popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens
-                        com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que
-                        incluem versões do Lorem Ipsum.</p>
-                </div>
-                <hr />
-                <div>
-                <img id="card" src="assets/imgs/card.png" alt="">
-                <p > O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
-                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
-                        caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos,
-                        mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi
-                        popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens
-                        com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que
-                        incluem versões do Lorem Ipsum.O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo
-                        a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os
-                        caracteres de um texto para criar um espécime de livro. </p>
-                
-                </div>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>Fatraca garantindo a sua segurança!</h2>
+                <p>A Fatraca oferece uma solução completa de controle de acesso projetada para atender às
+                    necessidades da Fatec.</p>
+                <a href="">Saiba mais</a>
             </div>
-        </main>
+            <div class="image">
+                <img src="assets\imgs\idCard.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer class="footer"> <!-- rodapé  -->
+        <span>
+            É os <strong>Guris </strong> e não tem jeito
+            <i class='fa fa-bolt text-warning'></i> </span>
 
-
-        <footer class="footer"> <!-- rodapé  -->
-            <span>
-                É os <strong>Guris </strong> e não tem jeito
-                <i class='fa fa-bolt text-warning'></i> </span>
-
-        </footer>
+    </footer>
 
     </div>
-    
+
     <script src="./assets/js/jquery.js"></script>
 
     <script src="./assets/js/slick.min.js"></script>
@@ -106,11 +68,11 @@ session_start();
     <script src="./assets/js/function.js"></script>
 
     <script>
-        document.getElementById('link1').addEventListener('click', function() {
+        document.getElementById('link1').addEventListener('click', function () {
             localStorage.setItem('acao', 'alterarClasse1');
         });
 
-        document.getElementById('link2').addEventListener('click', function() {
+        document.getElementById('link2').addEventListener('click', function () {
             localStorage.setItem('acao', 'alterarClasse2');
         });
     </script>

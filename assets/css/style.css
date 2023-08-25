@@ -1,232 +1,156 @@
 
-:root {
-    --bg-dark: rgb(34, 34, 34);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-    --logo-height: 100px;
-    --header-height: 100px;
-    --header-height-m: 130px;
-    --menu-top-height: 60px;
-    --aside-width: 225px;
-    --footer-height: 40px;
-    
-
-    --shadow:
-        0 2px 23px rgba(0, 0, 0, 0.1),
-        0 2px 49px rgba(0, 0, 0, 0.06);
-}
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    }
-
-.app {
-    margin: 0px;
-    display: grid;
-    grid-template-columns: var(--aside-width) 1fr;
-    grid-template-rows:
-        var(--header-height)
-        1fr
-        var(--footer-height );
-    grid-template-areas: 
-        "logo header"
-        "menu content"
-        "menu footer";
-    height: 100vh;
-    background-color: #f5f5f5;
 }
 
-aside.logo{
-    grid-area: logo;
-}
-
-aside.menu-area {
-    grid-area: menu;
-}
-
-main.content{
-    grid-area: content;
-}
-
-/* Estilo para o plugin slick */
-
-.slick-dotted ul{
-	list-style-type: none;
-	text-align: center;
-	position: relative;
-	margin-top: -50px;
-    z-index: 999;
-}
-
-.slick-dotted li{
-	display: inline-block;
-	margin: 0 7px;
-}
-
-.slick-dotted button:focus{
-	outline: 0;
-}
-
-.slick-dotted li button{
-	width: 16px;
-	height: 16px;
-	border-radius: 8px;
-	color: #d8d8d8;
-	border-width: 0;
-	background: #d8d8d8;
-	cursor: pointer;
-}
-
-li.slick-active button{
-	background: #688293;
-	color: #688293;
-}
-
-.slick-slide:focus{
-	outline: none;
-}
-
-/* Fim do estilo */
-
-
-/* Estilo do header */
-
-.container{
+section{
+    position: relative;
     width: 100%;
-    max-width: 1670px;
-    margin: 0 auto;
-}
-
-.header{
-    height: 10.5vh;
-    padding: 1%;
-    background-color:#B20000;
-}
-
-footer.footer{
-    grid-area: footer;
-}
-
-/* Logo */
-
-aside.logo{
-    background-color: #730606;
+    min-height: 100vh;
+    padding: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background: #fff;
 }
 
-aside.logo img{
-    padding: 0px 15px;
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d20000;
+    
 }
 
-/* Logo */
-
-
-/* --- Nav --- */
-
-aside.menu-area{
-    background-color: var(--bg-dark);
-    box-shadow: 
-        2px 0 10px 0 rgba(0, 0, 0, 0.12),
-        2px 0 15px 0 rgba(0, 0, 0, 0.19);
-}
-
-.menu a{
-    display: block;
+header .logo{
+    position: relative;
+    font-size: 2.0vw;
     text-decoration: none;
-    color: white;
-    padding: 15px;
-    font-weight: 300;
-    
-}
-.menu a:hover {
-    background: linear-gradient(135deg,  #B20000 0%, #330000 100% );
-}
-
-.perfil img{
-    width: 25%;
-    height: 25%;
-    padding-right: 4px;
-}
-
-.perfil a{
-    
-    font-weight: 700;
+    color: #fff;
     
 }
 
-.perfil a:hover{
-    background-color: #730606;
+header .logo:hover{
+    color: #333;
+    transition: 0.3s;
 }
 
-.perfil{
-    border: #02090ed7 0.5px solid;
-    background-color:#730606;
-
+header ul{
+    position: relative;
+    display: flex;
 }
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration: none;
+    font-size: 2.8vh;
+}
+
+header ul li a:hover{
+    color: #333;
+    transition: 0.3s;
+}
+ 
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.content .text{
+    position: relative;
+    max-width: 700px; 
+    bottom: 40px;
+}
+
+.content .text h2
+{
+    color: #d30000;
+    font-size: 3.7vw;
+    line-height: 1.1em;
+    letter-spacing: 1px;
+    font-weight: 600;
     
-
-/* --- Nav --- */
-
-/* header */
-
-header.header{
-    background-color: #FFF;
-    padding: 15px 15px;
-    margin-top: 0;
-    /* overflow: hidden; */
-    white-space: nowrap;
-    box-shadow: var(--shadow);
-    height: 100px;
 }
 
-header.header h1{
-    font-size: 1.8em;
+.content .text p{
+    color: #333;
+    font-size: 1.7vw;
+    margin-top: 30px;
 }
 
-header.header p{
-    text-align: justify;
-    font-size: 1.2em;
+.content .text a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #d30000;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 1.1vw;
 }
 
-/* header */
-
-/* conteudo */
-
-.conteudo{
-    padding: 10px;
-    margin: 20px 10px 15px 5px;
+.content .text a:hover{
+    background: rgb(156, 40, 40);
 }
 
-.conteudo p{
-    text-align: justify;
-
-}
-
-#biometria {
-    height: 250px;
-    width: 520px;
-    margin-right: 13px;
-    margin-top: 5px;
-    float: left;
-    border: #330000 0.3px solid;
+.content .image{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 20px;
+    margin-left: 10px;
 
 }
 
-#card{
-    height: 210px;
-    width: 410px;
-    height: 200px;
-    width: 500px;
-    margin-left: 13px;
-    float: right;
-    margin-top: 5px;
-    border: #330000 0.3px solid;
+.content .image img{
+    max-width: 43vw;
 }
 
-/* conteudo */
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d20000;
+    clip-path: circle(610px at right 850px);
+}
+
+.circle2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    clip-path: circle(620px at right 900px);
+}
 
 /* footer */
 footer.footer{
@@ -235,103 +159,7 @@ footer.footer{
     justify-content: flex-end;
     padding: 0 25px;
     color: #FFF;
-    background: #730606;
+    background: #d30000;
     box-shadow: var(--shadow);
 }
 /* footer */
-
-/* main */
-main > div {
-    background-color: #fff;
-    box-shadow: 0px 0px 15px #0004;
-    
-}
-/* main */
-
-nav.menu-desktop{
-    position: relative;
-    top: -32px;
-}
-
-.menu-desktop ul{
-    float: right;
-}
-
-.menu-desktop li{
-    float: left;
-    padding-left: 50px;
-    list-style: none;
-}
-
-.menu-desktop a{
-    text-decoration: none;
-    color: #f7f5f5;
-    font-size: 18px;
-}
-
-.menu-desktop a:hover{
-    color: #ccc;
-    transition: 0.5s;
-}
-
-/* Fim do header */
-
-@media screen and (max-width: 768px) {
-
-    .app{
-        grid-template-rows: 
-            var(--logo-height)
-            var(--menu-top-height)
-            1fr
-            var(--footer-height);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "logo"
-            "menu"
-            "content"
-            "footer";
-    }
-
-    .header{
-        display: none;
-    }
-
-    .menu{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        height: 100%;
-        justify-content: space-around;
-    }
-    .menu a{
-        display: inline;
-        padding: 10px 15px;
-        border-radius: 20px;
-        margin: 0;
-
-    }
-
-    .perfil img{
-        width: 40px;
-        height: 40px;
-        margin-top: 5px;
-    }
-
-    .perfil{
-        width: 35%;
-        height: 50px;
-        border: none;
-        border-radius: 25px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-
-    #biometria {
-        height: 200px;
-        width: 480px;
-        margin-right: 10px;
-        float: left;
-    
-    }
-}
