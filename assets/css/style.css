@@ -12,8 +12,8 @@
 section{
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 60px;
+    /* min-height: 100vh; */
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,12 +25,12 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 60px;
+    padding: 15px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #d20000;
-    
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 header .logo{
@@ -160,6 +160,11 @@ footer.footer{
     padding: 0 25px;
     color: #FFF;
     background: #d30000;
-    box-shadow: var(--shadow);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 10px 20px 30px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 /* footer */
